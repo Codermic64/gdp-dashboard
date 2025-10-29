@@ -140,15 +140,17 @@ def get_full_emission_dataframe(activity_data, adjustments):
 
 # --- Streamlit UI Components ---
 
-# State initialization for "Load Sample Data" and "Reset"
+# State initialization
 if 'activity_data' not in st.session_state:
     st.session_state['activity_data'] = DEFAULT_ACTIVITY_DATA.copy()
 if 'adj_ev_share' not in st.session_state:
-    st.session_state['adj_ev_share'] = 30 # Default from screenshot 1
+    st.session_state['adj_ev_share'] = 30
 if 'adj_km_red' not in st.session_state:
-    st.session_state['adj_km_red'] = 10 # Default from screenshot 1
+    st.session_state['adj_km_red'] = 10
 if 'adj_load_factor' not in st.session_state:
-    st.session_state['adj_load_factor'] = 80 # Default from screenshot 1
+    st.session_state['adj_load_factor'] = 80
+if 'Cars_km' not in st.session_state:
+    st.session_state['Cars_km'] = DEFAULT_ACTIVITY_DATA['Cars_km']
 
 def load_sample_data():
     st.session_state['activity_data'] = DEFAULT_ACTIVITY_DATA.copy()
