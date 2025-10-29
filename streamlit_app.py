@@ -149,8 +149,26 @@ if 'adj_km_red' not in st.session_state:
     st.session_state['adj_km_red'] = 10
 if 'adj_load_factor' not in st.session_state:
     st.session_state['adj_load_factor'] = 80
+
+# Initialize all input variables
 if 'Cars_km' not in st.session_state:
     st.session_state['Cars_km'] = DEFAULT_ACTIVITY_DATA['Cars_km']
+if 'Trucks_km' not in st.session_state:
+    st.session_state['Trucks_km'] = DEFAULT_ACTIVITY_DATA['Trucks_km']
+if 'Buses_km' not in st.session_state:
+    st.session_state['Buses_km'] = DEFAULT_ACTIVITY_DATA['Buses_km']
+if 'Forklifts_hr' not in st.session_state:
+    st.session_state['Forklifts_hr'] = DEFAULT_ACTIVITY_DATA['Forklifts_hr']
+if 'Planes_hr' not in st.session_state:
+    st.session_state['Planes_hr'] = DEFAULT_ACTIVITY_DATA['Planes_hr']
+if 'Lighting_kWh' not in st.session_state:
+    st.session_state['Lighting_kWh'] = DEFAULT_ACTIVITY_DATA['Lighting_kWh']
+if 'Heating_kWhth' not in st.session_state:
+    st.session_state['Heating_kWhth'] = DEFAULT_ACTIVITY_DATA['Heating_kWhth']
+if 'Cooling_kWh' not in st.session_state:
+    st.session_state['Cooling_kWh'] = DEFAULT_ACTIVITY_DATA['Cooling_kWh']
+if 'Computing_kWh' not in st.session_state:
+    st.session_state['Computing_kWh'] = DEFAULT_ACTIVITY_DATA['Computing_kWh']
 
 def load_sample_data():
     st.session_state['activity_data'] = DEFAULT_ACTIVITY_DATA.copy()
